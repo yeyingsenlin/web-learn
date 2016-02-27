@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box-align</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 100px;
+        border: 2px solid red;
+    }
+
+    .box-baseline {
+
+        /* Internet Explorer 10 */
+        display:-ms-flexbox;
+        -ms-flex-pack:baseline;
+        -ms-flex-align:baseline;
+
+        /* Firefox */
+        display:-moz-box;
+        -moz-box-pack:baseline;
+        -moz-box-align:baseline;
+
+        /* Safari, Opera, and Chrome */
+        display:-webkit-box;
+        -webkit-box-pack:baseline;
+        -webkit-box-align:baseline;
+
+        /* W3C */
+        display:box;
+        box-pack:baseline;
+        box-align:baseline;
+    }
+
+    .box-center {
+
+        /* Internet Explorer 10 */
+        display:-ms-flexbox;
+        -ms-flex-pack:center;
+        -ms-flex-align:center;
+
+        /* Firefox */
+        display:-moz-box;
+        -moz-box-pack:center;
+        -moz-box-align:center;
+
+        /* Safari, Opera, and Chrome */
+        display:-webkit-box;
+        -webkit-box-pack:center;
+        -webkit-box-align:center;
+
+        /* W3C */
+        display:box;
+        box-pack:center;
+        box-align:center;
+    }
+
+    .box-end {
+
+        /* Internet Explorer 10 */
+        display:-ms-flexbox;
+        -ms-flex-pack:end;
+        -ms-flex-align:end;
+
+        /* Firefox */
+        display:-moz-box;
+        -moz-box-pack:end;
+        -moz-box-align:end;
+
+        /* Safari, Opera, and Chrome */
+        display:-webkit-box;
+        -webkit-box-pack:end;
+        -webkit-box-align:end;
+
+        /* W3C */
+        display:box;
+        box-pack:end;
+        box-align:end;
+    }
+
+    .box-inherit {
+
+        /* Internet Explorer 10 */
+        display:-ms-flexbox;
+        -ms-flex-pack:inherit;
+        -ms-flex-align:inherit;
+
+        /* Firefox */
+        display:-moz-box;
+        -moz-box-pack:inherit;
+        -moz-box-align:inherit;
+
+        /* Safari, Opera, and Chrome */
+        display:-webkit-box;
+        -webkit-box-pack:inherit;
+        -webkit-box-align:inherit;
+
+        /* W3C */
+        display:box;
+        box-pack:inherit;
+        box-align:inherit;
+    }
+
+    .box-start {
+
+        /* Internet Explorer 10 */
+        display:-ms-flexbox;
+        -ms-flex-pack:start;
+        -ms-flex-align:start;
+
+        /* Firefox */
+        display:-moz-box;
+        -moz-box-pack:start;
+        -moz-box-align:start;
+
+        /* Safari, Opera, and Chrome */
+        display:-webkit-box;
+        -webkit-box-pack:start;
+        -webkit-box-align:start;
+
+        /* W3C */
+        display:box;
+        box-pack:start;
+        box-align:start;
+    }
+
+    .box-stretch {
+
+        /* Internet Explorer 10 */
+        display:-ms-flexbox;
+        -ms-flex-pack:stretch;
+        -ms-flex-align:stretch;
+
+        /* Firefox */
+        display:-moz-box;
+        -moz-box-pack:stretch;
+        -moz-box-align:stretch;
+
+        /* Safari, Opera, and Chrome */
+        display:-webkit-box;
+        -webkit-box-pack:stretch;
+        -webkit-box-align:stretch;
+
+        /* W3C */
+        display:box;
+        box-pack:stretch;
+        box-align:stretch;
+    }
+</style>
+<script>
+    function ChangeBoxAlign(x) {
+        var boxAlign = x.options[x.selectedIndex].text;
+        var div = document.getElementById("myDiv");
+        div.className = 'box-' + boxAlign;
+        if (div.style.MozBoxAlign !== undefined) {}
+        else if (div.style.webkitBoxAlign !== undefined) {}
+        else if (div.style.msFlexAlign !== undefined) {}
+        else {
+            alert("Your browser doesn't support this example!");
+        }
+    }
+</script>
+<body>
+<div class="box" id="myDiv">
+    <b>first child</b>
+    <i>second child</i>
+</div>
+
+<select onchange="ChangeBoxAlign (this);" size="6">
+    <option selected="selected" />baseline
+    <option />center
+    <option />end
+    <option />inherit
+    <option />start
+    <option />stretch
+</select>
+
+</body>
+</html>
