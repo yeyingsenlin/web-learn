@@ -1,0 +1,411 @@
+head,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e2e5e8;
+}
+header{
+    width: 100%;
+    height:72px;
+    background-color: #144465;
+
+}
+img,button{
+    cursor:pointer;
+}
+/*网页最上面“点点”样式*/
+.header-left{
+    width:70px;
+    height:40px;
+    float:left;
+    padding:20px 340px ;
+}
+/*网页最上面“关于我们”的样式*/
+.header-right {
+    width: 18px;
+    height: 13px;
+    opacity: 0.5;
+    float: right;
+    padding: 40px 360px;
+}
+/*清除所有浮动*/
+.clear{ clear:both}
+/*除网页页头下面整个内容框*/
+.global{
+    width: 910px;
+    height: auto;
+    margin-left:340px ;
+    margin-top: 20px;
+    border: 1px solid #2c4aff;
+}
+/*用户头像图片样式*/
+.user-avtar2 img{
+    border-radius: 5px;
+}
+.user-avtar{
+    width: 65px;
+    height: 65px;
+    border: 0;
+    background:url("img/client-1.GIF")  center;
+    border-radius: 5px;
+    overflow:hidden;
+    position:absolute;
+    z-index:-1;
+}
+
+.red-star{
+    position: relative;
+    width:21px;
+    height:30px;
+    background: url("img/feed.png")  -250px -151px;
+}
+
+/*用户1头像样式*/
+.user-avtar1{
+    width: 65px;
+    height: 65px;
+    border: 0;
+    border-radius: 5px;
+    padding: 0;
+    float: left;
+}
+
+/*用户1发布内容所有区域样式*/
+.content1-block{
+    width: 540px;
+    height: auto;
+    margin:0 20px 5px 20px ;
+    float: left;
+    background-color: #fe4bff;
+    border: 1px solid #fe4bff;
+    overflow:hidden;
+}
+
+/*用户1发布内容小块区域样式*/
+.content1-block1{
+    width: 500px;
+    height: auto;
+    background-color: #fdfdfe;
+    border-radius: 10px;
+    padding:5px 20px;
+    border: 1px solid rgba(58, 255, 26, 0.46);
+    overflow:hidden;
+}
+/*.triangle{*/
+    /*width: 15px;*/
+    /*height: 15px;*/
+    /*border:1px red solid;*/
+    /*background:url("img/feed.png") no-repeat 0px -150px;*/
+    /*float:left;*/
+    /*margin-left: -15px;*/
+/*}*/
+.content1-block2{
+    width: 500px;
+    height: auto;
+    background-color: #fdfdfe;
+    border-radius: 10px 10px 10px 10px;
+    padding:5px 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(58, 255, 26, 0.46);
+    overflow:hidden;
+}
+/*用户发布图片样式*/
+.block-img1{
+    width: 160px;
+}
+.block-img2{
+    width: 246px;
+    height:132px;
+}
+.block-img-line{
+    line-height: 20px;
+}
+/*右边标签栏大区域样式*/
+.block-right{
+    width:250px;
+    height:auto;
+    background-color: #1d00ff;
+    margin-top: 40px;
+    float:left;
+}
+/*登陆按钮样式*/
+#load-button{
+    width: 250px;
+    height: 48px;
+    border-radius: 6px;
+    background-color: #f3f3f4;
+    border:1px solid #c6c9cb;
+}
+/*搜索标签样式*/
+.search{
+    width: 248px;
+    height: 37px;
+    border-radius:5px;
+    background-color: #f6f7f7;
+    border:1px solid #c6c9cb;
+    margin-top: 37px;
+    overflow:hidden;
+}
+.search1{
+    width: 213px;
+    height: 37px;
+    float: right;
+    border:0;
+    background:none;
+    text-align:left;
+    font-size:12px;
+    margin-top:-39px;
+    margin-left: 10px;
+    padding: 0;
+}
+input:focus {
+    outline:none;
+}
+.search button:focus{
+    outline:none;
+}
+/*搜索输入栏的放大镜*/
+.magnifier{
+    width: 25px;
+    height: 25px;
+    border:0;
+    background: url("img/sidemen.png") no-repeat -1154px 0px;
+    float:left;
+    margin-top:-32px;
+    margin-left: 10px;
+    cursor:pointer;
+}
+/*标签栏的标签样式*/
+.bookmark{
+    width: 18px;
+    height: 18px;
+    border:0;
+    background: url("img/sidemen.png") no-repeat -102px -50px;
+    float:left;
+    margin-top:10px;
+    margin-left: 12px;
+    cursor:pointer;
+}
+/*标签栏的最后一行标签样式*/
+.bookmark1{
+    width: 18px;
+    height: 18px;
+    border:0;
+    background: url("img/sidemen.png") no-repeat -135px -50px;
+    float:left;
+    margin-top:5px;
+    margin-left:12px;
+    cursor:pointer;
+}
+/*标签栏字体样式*/
+.label span{
+ margin-left:10px;
+}
+/*标签区域样式*/
+.label{
+   padding: 0;
+    margin: 0;
+}
+/*热门标签样式*/
+.label li{
+    width: 248px;
+    height: 37px;
+    line-height: 37px;
+    background-color: #d7dadd;
+    border:1px solid #c6c9cb;
+    font-size: 13px;
+    list-style-type: none;
+    cursor:pointer;
+    padding:0;
+    margin: 0;
+}
+#label li:hover{
+    background-color:#f3f3f4;
+    border:1px solid #f3f3f4;
+}
+/*最后一个热门标签样式*/
+.label li:nth-of-type(6){
+    height: 28px;
+    line-height: 28px;
+    border-radius: 0 0 6px 6px;
+    background-color: #dddfe2;
+    color: #8e8e8e ;
+}
+/*推荐区域样式*/
+.recommend{
+    padding: 0;
+    margin-top:20px;
+}
+/*推荐标签样式*/
+.recommend li{
+    width: 248px;
+    height: 37px;
+    /*line-height: 37px;*/
+    background-color: #d7dadd;
+    border:1px solid #c6c9cb;
+    font-size: 10px;
+    list-style-type: none;
+    cursor:pointer;
+}
+#recommend li:hover{
+    background-color:#f3f3f4;
+    border:1px solid #f3f3f4;
+}
+.recommend-text{
+    color: #8e8e8e ;
+}
+.recommend1{
+    margin-left: 45px;
+    margin-top:5px;
+}
+.recommend-img1{
+    width: 37px;
+    height: 37px;
+    background-image: url("img/recommend-1.PNG");
+    float: left;
+}
+/*推荐图片样式*/
+.recommend-img2{
+    width: 37px;
+    height: 37px;
+    background-image: url("img/recommend-2.jpeg");
+    float: left;
+}
+.recommend2{
+   float:left;
+    margin-left: 10px;
+    margin-top:5px;
+}
+
+/*最后一个推荐标签样式*/
+.recommend li:nth-of-type(5){
+    height: 30px;
+    line-height: 30px;
+    border-radius: 0 0 6px 6px;
+    background-color: #dddfe2;
+    color: #8e8e8e ;
+}
+.recommend-img3{
+    width: 22px;
+    height:18px;
+    background: url("img/sidemen.png") no-repeat -32px -51px;
+    float: left;
+    margin: 6px 5px 0px 10px;
+}
+/*多行div对齐*/
+.nofloat{
+    overflow:hidden;
+}
+/*用户2头像样式*/
+.user-avtar2 {
+    width: 65px;
+    height: 65px;
+    border: 0;
+    border-radius: 5px;
+    padding: 0;
+    float: left;
+    margin-top: 20px;
+}
+/*用户2内容区域样式*/
+.content2-block{
+    width: 500px;
+    height: auto;
+    background-color: #fdfdfe;
+    border-radius: 10px;
+    padding:15px 20px;
+    margin: 20px 0 0 20px;
+    border: 1px solid rgba(58, 255, 26, 0.46);
+    float:left;
+    overflow:hidden;
+}
+.text-1{
+    font-size:14px;
+    line-height: 20px;
+    color: #444955;
+}
+
+.text-2{
+    font-size: 10px;
+    color: #8e8e8e;
+    cursor:pointer;
+    text-decoration:underline;
+}
+.text-3 a{
+    font-size: 10px;
+    line-height: 35px;
+    cursor:pointer;
+    color: #b4b4b4;
+    margin: 3px;
+    vertical-align:middle;
+    }
+.p1{
+    margin:-10px 0;
+}
+.text-3 a:hover{
+    color:#8e8e8e;
+}
+.text-4{
+    font-size: 10px;
+    color: #b4b4b4;
+    display: inline;
+    margin-top: -2px;
+}
+.text-5{
+    font-size: 14px;
+    color: #8e8e8e;
+    letter-spacing:10px;
+}
+.text-6{
+    font-size: 23px;
+    line-height: 40px;
+    font-weight:bold;
+    color: #42464b;
+}
+.text-7{
+    font-size: 14px;
+    text-decoration:underline;
+    color: #42464b;
+    line-height: 20px;
+}
+.text-8{
+    letter-spacing: -1px;
+}
+.block3-img1{
+    width:246px;
+}
+.film-button{
+    width: auto;
+    height: 18px;
+    border-radius: 3px;
+    background-color: #1e5373;
+    font-size: 10px;
+    color: white;
+    border:1px solid #1e5373;
+    padding:0 3px;
+    margin-top:8px;
+    margin-right: 4px;
+    vertical-align:middle;/*同一行垂直居中对齐*/
+    text-align: center;
+    cursor:pointer;
+}
+
+.like-star{
+    width: 15px;
+    height: 15px;
+    background: url("img/feed.png") no-repeat -60px 0px;
+    cursor:pointer;
+    float: right;
+    vertical-align:middle;
+    margin-top:10px;
+    margin-left: 5px;
+}
+.content-bottom-right{
+    float: right;
+}
+.content-bottom-left{
+    float: left;
+}
+
+/*清除所有浮动*/
+.clear{ clear:both}
