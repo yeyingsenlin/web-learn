@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+        }
+        html{
+            background: #fff;
+        }
+        body{
+            height: 400px;
+            background: #ccc;
+        }
+        p{
+            line-height: 16px;
+        }
+        div{
+            border: 1px red solid;
+        }
+
+        .area{
+            width: 400px;
+            height: 200px;
+            position: relative;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 5px;
+        }
+
+        img{
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            background: red;
+        }
+
+        .a{
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+<p>
+1、所有爸爸区域的图片要绝对定位时，要看图片的父对象区域是否为相对定位，即position: relative;<br/>
+2、如果父对象没有定义，则再向上级找爷爷，如果有就以爷爷区域为基准进行绝对坐标定义；<br/>
+3、如果爷爷区域还没有就依次向上级找，一直找到有相对定位或到顶层 html 对象为止，就以 html 为基准定位
+</p>
+<div class="area">
+    <div class="a">
+        a爸爸区域，有相对属性
+        <img src="" width="50" height="50" />
+    </div>
+    <div class="b">
+        B爸爸，没有
+        <img src="" width="50" height="50" />
+    </div>
+    <p>area 爷爷区域，有相对属性</p>
+</div>
+<div class="c">
+    C爸爸，没有
+    <img src="" width="50" height="50" />
+</div>
+灰色区域是body
+<script>
+
+    function changeColor() {
+        var r = parseInt(Math.random()*256);
+        var g = parseInt(Math.random()*256);
+        var b = parseInt(Math.random()*256);
+        var el = document.querySelector(".c > img");
+        el.style.backgroundColor = "rgb("+r+", "+g+", "+b+")";
+    }
+
+    window.onload = function (){
+        setInterval(function(){
+            changeColor();
+        }, 200);
+    };
+
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+
+</script>
+</body>
+</html>
